@@ -14,38 +14,52 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./sass/style.css" />
   </head>
 
   <body>
-    <div id="nav">
-      <h4>RockerAir</h4>
-      <div id="links">
-        <a href="">Home</a><a href="">About</a><a href="">Contact</a>
-        <div id="button">
-          <span>Signup</span>
+    <div class="nav">
+      <img
+        src="https://assets-global.website-files.com/6205ecdcec584c56193d6121/625008de558fafd4df9501ab_logo_RocketAir.svg"
+        alt=""
+      />
+      <div class="linkbox">
+        <div class="button">
+          <span class="fs5">Get in touch</span>
           <div class="opening"></div>
         </div>
-        <i class="ri-menu-line"></i>
+        <div class="menubtn">
+          <div class="circle c1"></div>
+          <div class="circle c2"></div>
+          <div class="circle c3"></div>
+          <div class="circle c4"></div>
+        </div>
       </div>
     </div>
-    <div id="main">
-      <div data-scroll data-scroll-sticky data-scroll-target="#main" id="hero">
+    <div class="wrapper">
+      <div
+        data-scroll
+        data-scroll-sticky
+        data-scroll-target=".wrapper"
+        class="sec1"
+      >
         <div class="row">
-          <h1 class="rowtxts">Digital</h1>
+          <h1 class="fs2">Digital</h1>
         </div>
         <div class="row">
-          <h1 class="rowtxts">experiences</h1>
-          <span id="line"></span>
-          <h1 class="rowtxts">that</h1>
+          <h1 class="fs2">Experiences</h1>
+          <span class="line"></span>
+          <h1 class="fs2">that</h1>
         </div>
         <div class="row">
-          <h1 class="rowtxts">Win by design.</h1>
+          <h1 class="fs2">Win by Design</h1>
         </div>
-        <p>check out the hype <i class="ri-arrow-down-line"></i></p>
+        <p class="fs6">
+          check out the hype <i class="ri-arrow-down-line fs5"></i>
+        </p>
       </div>
-      <div id="content">
-        <div data-scroll-section id="video">
+      <div class="sections-holder">
+        <div data-scroll-section class="sec2">
           <video
             src="https://assets.website-files.com/6205ecdcec584c56193d6121/620e78bc9b48eb5690366bf7_Showreel-RocketAir-transcode.mp4"
             autoplay
@@ -53,78 +67,64 @@
             loop
           ></video>
         </div>
-        <div data-scroll-section id="desc">
-          <h1 class="rowtxts">
-            RocketAir is a design and strategy<br />company with an adaptive<br />approach
+        <div data-scroll-section class="sec3">
+          <p class="rowtexts fs3">
+            RocketAir is a design and strategy company with an adaptive approach
             to problem solving.
-          </h1>
+          </p>
         </div>
-        <div data-scroll-section id="orbital">
-          <h2>We call it <span id="line"></span></h2>
-          <div class="rowtxt">
-            <h1 class="rowtxts">orbital</h1>
+        <div data-scroll-section class="sec4">
+          <h3 class="fs3">We call it <span class="line"></span></h3>
+          <div class="rowtext">
+            <h1 class="fs1 rowtexts">orbital</h1>
           </div>
-          <div class="rowtxt">
-            <h1 class="rowtxts">design</h1>
-            <span id="capsule">Get to know us</span>
+          <div class="rowtext">
+            <h1 class="fs1 rowtexts">design</h1>
+            <div class="button">
+              <span class="fs4">Get to know us</span>
+              <div class="opening"></div>
+            </div>
           </div>
         </div>
-        <div data-scroll-section id="orbitalvideo">
-          <video
-            src="https://www.dropbox.com/s/t7hz8zhzqlr0cpx/Orbital-3d_home.mp4?raw=1"
-            autoplay
-            loop
-            muted
-          ></video>
-        </div>
-        <div data-scroll-section id="slides">
+        <div data-scroll-section class="sec5">
           <div data-index="1" class="slide sld">
             <div class="opening"></div>
             <div class="tile">
-              <h3>Brand</h3>
+              <h3 class="fs3">Brand</h3>
               <div class="icon">
-                <i id="mainteer" class="ri-arrow-right-line"></i>
-                <i id="rightteer" class="ri-arrow-right-up-line"></i>
+                <i class="ri-arrow-right-line fs5 mainarrow"></i>
+                <i class="ri-arrow-right-up-line fs5 rightarrow"></i>
               </div>
             </div>
-            <div class="info">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-              magnam sapiente ut.
-            </div>
+            <p class="fs5">Unique brand identities that make a mark.</p>
           </div>
           <div data-index="2" class="slide sld">
             <div class="opening"></div>
 
             <div class="tile">
-              <h3>Product</h3>
+              <h3 class="fs3">Product</h3>
               <div class="icon">
-                <i id="mainteer" class="ri-arrow-right-line"></i>
-                <i id="rightteer" class="ri-arrow-right-up-line"></i>
+                <i class="ri-arrow-right-line fs5 mainarrow"></i>
+                <i class="ri-arrow-right-up-line fs5 rightarrow"></i>
               </div>
             </div>
-            <div class="info">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-              magnam sapiente ut.
-            </div>
+            <p class="fs5">Intuitive digital produts that people get.</p>
           </div>
           <div data-index="3" class="slide sld">
             <div class="opening"></div>
 
             <div class="tile">
-              <h3>Motion</h3>
+              <h3 class="fs3">Motion</h3>
               <div class="icon">
-                <i id="mainteer" class="ri-arrow-right-line"></i>
-                <i id="rightteer" class="ri-arrow-right-up-line"></i>
+                <i class="ri-arrow-right-line fs5 mainarrow"></i>
+                <i class="ri-arrow-right-up-line fs5 rightarrow"></i>
               </div>
             </div>
-            <div class="info">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-              magnam sapiente ut.
-            </div>
+            <p class="fs5">Compelling animation that inspires action.</p>
           </div>
-          <div id="videoslide" class="slide">
+          <div class="videoslide sld">
             <div class="circular">
-              <div id="minicircle"></div>
+              <div class="minicircle"></div>
               <img
                 src="https://assets.website-files.com/6205ecdcec584c56193d6121/624e913ad5a78b549657ae48_services_circle-text.svg"
                 alt=""
@@ -156,28 +156,17 @@
             </div>
           </div>
         </div>
-        <div data-scroll-section id="partners">
-          <h1 class="rowtxts">
-            We partner with<br />forward-thinking<br />enterprises and startups
-          </h1>
+        <div data-scroll-section class="sec6">
+          <h2 class="fs2 rowtexts">
+            We partner with<br />forward-thinking<br />enterprises and startups.
+          </h2>
           <div class="partnerscomp">
             <div class="partner">
               <img
-                src="https://assets.website-files.com/620970e0fc117e313fe36ebd/6230748853904a0042b3044f_logo_BlockFi.svg"
+                src="https://assets-global.website-files.com/620970e0fc117e313fe36ebd/63d7e8af53f4b8cec99e9421_logo-terra.svg"
                 alt=""
               />
-              <p>
-                Helping a fintech leader redefine banking. We designed BlockFi’s
-                web and mobile app, which lets users manage their crypto wallet,
-                trade crypto, and borrow money against their holdings.
-              </p>
-            </div>
-            <div class="partner">
-              <img
-                src="https://assets.website-files.com/620970e0fc117e313fe36ebd/6230788a6672557bb9fd96c8_logo_Coursera.svg"
-                alt=""
-              />
-              <p>
+              <p class="fs5">
                 Helping a fintech leader redefine banking. We designed BlockFi’s
                 web and mobile app, which lets users manage their crypto wallet,
                 trade crypto, and borrow money against their holdings.
@@ -188,7 +177,29 @@
                 src="https://assets.website-files.com/620970e0fc117e313fe36ebd/624db668954b1077a51d3dab_qed-investors.svg"
                 alt=""
               />
-              <p>
+              <p class="fs5">
+                Helping a fintech leader redefine banking. We designed BlockFi’s
+                web and mobile app, which lets users manage their crypto wallet,
+                trade crypto, and borrow money against their holdings.
+              </p>
+            </div>
+            <div class="partner">
+              <img
+                src="https://assets-global.website-files.com/620970e0fc117e313fe36ebd/624ed1a4baf7a9339f3a7866_software_ag.svg"
+                alt=""
+              />
+              <p class="fs5">
+                Helping a fintech leader redefine banking. We designed BlockFi’s
+                web and mobile app, which lets users manage their crypto wallet,
+                trade crypto, and borrow money against their holdings.
+              </p>
+            </div>
+            <div class="partner">
+              <img
+                src="https://assets-global.website-files.com/620970e0fc117e313fe36ebd/63d7e9819f22e10fe22128bb_logo_qlik.svg"
+                alt=""
+              />
+              <p class="fs5">
                 Helping a fintech leader redefine banking. We designed BlockFi’s
                 web and mobile app, which lets users manage their crypto wallet,
                 trade crypto, and borrow money against their holdings.
@@ -196,27 +207,36 @@
             </div>
           </div>
         </div>
-        <div data-scroll-section id="work">
-          <div id="fsworksection">
-            <h1>work</h1>
+        <div data-scroll-section class="sec7">
+          <div class="headingbox">
+            <h1 class="fs1">work</h1>
           </div>
-          <div class="card">
-            <div class="photu"></div>
-            <h2>Olive</h2>
-          </div>
-          <div class="card">
-            <div class="photu"></div>
-            <h2>Olive</h2>
-          </div>
-          <div class="card">
-            <div class="photu"></div>
-            <h2>Olive</h2>
+          <div class="cbholder">
+            <div class="cardbox">
+              <div class="card">
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+            </div>
+            <div class="cardbox">
+              <div class="card">
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+            </div>
+            <div class="cardbox">
+              <div class="card">
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+            </div>
           </div>
         </div>
+        <!-- 
         <div data-scroll-section id="footer">
           <div id="fleft">
-            <h1 class="rowtxts">Fuel for thought.</h1>
-            <p class="rowtxts">
+            <h1 class="rowtexts">Fuel for thought.</h1>
+            <p class="rowtexts">
               A casual hello from the RocketAir Crew filled with insights,
               inspiration, and good vibes only.
             </p>
@@ -225,7 +245,7 @@
               alt=""
             />
             <input type="text" placeholder="Email" />
-            <button class="rowtxts">subscribe</button>
+            <button class="rowtexts">subscribe</button>
           </div>
           <div id="fright">
             <a href="">
@@ -262,9 +282,9 @@
             >
           </div>
         </div>
+        -->
       </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"

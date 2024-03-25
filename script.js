@@ -2,7 +2,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function locomotiveScroll() {
   const locoScroll = new LocomotiveScroll({
-    el: document.querySelector("#main"),
+    el: document.querySelector(".wrapper"),
     smooth: true,
     smartphone: { smooth: true },
     getDirection: true,
@@ -10,7 +10,7 @@ function locomotiveScroll() {
 
   locoScroll.on("scroll", ScrollTrigger.update);
 
-  ScrollTrigger.scrollerProxy("#main", {
+  ScrollTrigger.scrollerProxy(".wrapper", {
     scrollTop(value) {
       return arguments.length
         ? locoScroll.scrollTo(value, 0, 0)
@@ -24,7 +24,7 @@ function locomotiveScroll() {
         height: window.innerHeight,
       };
     },
-    pinType: document.querySelector("#main").style.transform
+    pinType: document.querySelector(".wrapper").style.transform
       ? "transform"
       : "fixed",
   });
@@ -61,29 +61,53 @@ function slidesHandleKaro() {
       var xVal = dets.clientX - bndrectvals.x;
       var yVal = dets.clientY - bndrectvals.y;
 
-      document.querySelector("#minicircle").style.top = yVal + "px";
-      document.querySelector("#minicircle").style.left = xVal + "px";
-      document.querySelector("#minicircle").style.boxShadow =
-        "0 0 10px 3px green";
+      document.querySelector(".minicircle").style.top = yVal + "px";
+      document.querySelector(".minicircle").style.left = xVal + "px";
+      document.querySelector(".minicircle").style.boxShadow =
+        "0 0 10px 3px black";
     });
 
   document
     .querySelector(".circular")
     .addEventListener("mouseleave", function (dets) {
-      document.querySelector("#minicircle").style.top = 50 + "%";
-      document.querySelector("#minicircle").style.left = 50 + "%";
+      document.querySelector(".minicircle").style.top = 50 + "%";
+      document.querySelector(".minicircle").style.left = 50 + "%";
 
-      document.querySelector("#minicircle").style.boxShadow = "none";
+      document.querySelector(".minicircle").style.boxShadow = "none";
     });
 }
 
 function gsapCodeScenarios() {
+  gsap.to(".nav", {
+    scrollTrigger: {
+      scroller: ".wrapper",
+      trigger: ".sec2",
+      start: "top 70%",
+      end: "top 70%",
+      scrub: 1,
+    },
+    top: "-100%",
+    ease: Expo.easeIn,
+  });
+
   gsap.to(".row", {
     scrollTrigger: {
-      scroller: "#main",
-      trigger: "#video",
-      start: "top 60%",
-      end: "top 10%",
+      scroller: ".wrapper",
+      trigger: ".sec2",
+      start: "top 70%",
+      end: "top 50%",
+      scrub: 2,
+    },
+    opacity: 0,
+    ease: Expo,
+  });
+
+  gsap.to(".sec1 p", {
+    scrollTrigger: {
+      scroller: ".wrapper",
+      trigger: ".sec2",
+      start: "top 70%",
+      end: "top 50%",
       scrub: 2,
     },
     opacity: 0,
@@ -92,7 +116,7 @@ function gsapCodeScenarios() {
 }
 
 function textAnimationCode() {
-  document.querySelectorAll(".rowtxts").forEach(function (row) {
+  document.querySelectorAll(".rowtexts").forEach(function (row) {
     row.innerHTML = `<div class="textwrapper">${row.innerHTML}</div>`;
   });
 
@@ -105,12 +129,12 @@ function textAnimationCode() {
     txt.innerHTML = clutter;
   });
 
-  gsap.set(".rowtxts span", { y: "200%" });
+  gsap.set(".rowtexts span", { y: "200%" });
 
-  document.querySelectorAll(".rowtxts").forEach(function (elem) {
+  document.querySelectorAll(".rowtexts").forEach(function (elem) {
     gsap.from(elem, {
       scrollTrigger: {
-        scroller: "#main",
+        scroller: ".wrapper",
         trigger: elem,
         start: "top 60%",
       },
@@ -129,7 +153,7 @@ function textAnimationCode() {
 function workAnimationCode() {
   gsap.to("#work .card", {
     scrollTrigger: {
-      scroller: "#main",
+      scroller: ".wrapper",
       trigger: "#work",
       start: "top 0%",
       scrub: 2,
@@ -142,6 +166,6 @@ function workAnimationCode() {
 
 locomotiveScroll();
 gsapCodeScenarios();
-textAnimationCode();
-workAnimationCode();
+// textAnimationCode();
+// workAnimationCode();
 slidesHandleKaro();

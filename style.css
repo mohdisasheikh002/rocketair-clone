@@ -6,6 +6,12 @@
 
 @font-face {
   font-family: Aeonik;
+  src: url(/fonts/Aeonik-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Aeonik;
   src: url(/fonts/Aeonik-Medium.ttf);
   font-weight: 500;
 }
@@ -251,22 +257,6 @@ video {
   border-radius: 100px;
 }
 
-#orbitalvideo {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background-color: black;
-}
-
-#orbitalvideo video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-}
-
 #slides {
   display: flex;
   width: 100%;
@@ -314,7 +304,7 @@ video {
   font-size: 1.3vw;
 }
 
-#mainteer {
+#mainarrow {
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
   position: absolute;
   top: 50%;
@@ -322,7 +312,7 @@ video {
   transform: translate(-50%, -50%);
 }
 
-#rightteer {
+#rightarrow {
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
   position: absolute;
   top: 150%;
@@ -347,11 +337,11 @@ video {
   cursor: pointer;
 }
 
-.slide:hover .icon #mainteer {
+.slide:hover .icon #mainarrow {
   left: 130%;
 }
 
-.slide:hover .icon #rightteer {
+.slide:hover .icon #rightarrow {
   top: 50%;
   left: 50%;
 }
@@ -555,7 +545,7 @@ video {
 #fleft img {
   margin: 5vw 0;
   width: 60%;
-} 
+}
 
 #fleft input {
   width: 100%;
