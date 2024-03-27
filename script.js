@@ -150,22 +150,21 @@ function textAnimationCode() {
   });
 }
 
-function workAnimationCode() {
-  gsap.to("#work .card", {
-    scrollTrigger: {
-      scroller: ".wrapper",
-      trigger: "#work",
-      start: "top 0%",
-      scrub: 2,
-    },
-    top: "-100%",
-    ease: Power4,
-    stagger: 0.08,
-  });
-}
+// function workAnimationCode() {
+//   gsap.to(".cbholder", {
+//     scrollTrigger: {
+//       scroller: ".wrapper",
+//       trigger: ".sec7",
+//       start: "top 0%",
+//       pin: true,
+//       scrub: 2,
+//     },
+//     top: "-250%",
+//   });
+// }
 
 locomotiveScroll();
 gsapCodeScenarios();
 // textAnimationCode();
-// workAnimationCode();
+workAnimationCode();
 slidesHandleKaro();

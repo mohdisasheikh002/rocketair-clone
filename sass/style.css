@@ -607,7 +607,7 @@ body {
 }
 .wrapper .sections-holder .sec6 h2 {
   font-size: 4vmax;
-  padding: 15vmax 3vmax;
+  padding: 15vmax 0;
 }
 .wrapper .sections-holder .sec6 .partnerscomp {
   height: -moz-fit-content;
@@ -630,8 +630,11 @@ body {
   line-height: 1.3vmax;
 }
 @media (max-width: 30cm) {
+  .wrapper .sections-holder .sec6 {
+    padding: 0 2.5vmax;
+  }
   .wrapper .sections-holder .sec6 h2 {
-    padding: 12vmax 2.5vmax;
+    padding: 12vmax 0vmax;
   }
   .wrapper .sections-holder .sec6 .partnerscomp {
     display: none;
@@ -639,6 +642,8 @@ body {
 }
 .wrapper .sections-holder .sec7 {
   position: relative;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 100%;
   background-color: #fff;
 }
@@ -646,8 +651,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   height: 100vh;
+  width: 100%;
 }
 .wrapper .sections-holder .sec7 .headingbox h1 {
   font-size: 30vmax;
@@ -660,16 +665,20 @@ body {
   height: fit-content;
   width: 100%;
 }
+.wrapper .sections-holder .sec7 .cbholder .randombox {
+  height: 100vh;
+  width: 100%;
+}
 .wrapper .sections-holder .sec7 .cbholder .cardbox {
   height: -moz-fit-content;
   height: fit-content;
   width: 100%;
 }
-.wrapper .sections-holder .sec7 .cbholder .cardbox:nth-child(1) {
+.wrapper .sections-holder .sec7 .cbholder .cardbox:nth-child(1), .wrapper .sections-holder .sec7 .cbholder .cardbox:nth-child(3) {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 12vmax;
+  padding-left: 12.5vmax;
 }
 .wrapper .sections-holder .sec7 .cbholder .cardbox:nth-child(2) {
   display: flex;
@@ -677,13 +686,65 @@ body {
   justify-content: flex-end;
   padding-right: 2.5vmax;
 }
-.wrapper .sections-holder .sec7 .cbholder .cardbox:nth-child(3) {
+.wrapper .sections-holder .sec7 .cbholder .cardbox .card {
+  width: 25vmax;
+  height: 42vmax;
+  z-index: 999;
+}
+.wrapper .sections-holder .sec7 .cbholder .cardbox .card .top {
+  height: 90%;
+  width: 100%;
+}
+.wrapper .sections-holder .sec7 .cbholder .cardbox .card .top img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.wrapper .sections-holder .sec7 .cbholder .cardbox .card .bottom {
+  height: 10%;
+  width: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
 }
-.wrapper .sections-holder .sec7 .cbholder .cardbox .card {
-  width: 25vw;
-  height: 38vw;
-  background-color: red;
+.wrapper .sections-holder .sec7 .cbholder .cardbox .card .bottom h4 {
+  color: #000;
+  font-size: 1.9vmax;
+}
+@media (max-width: 30cm) {
+  .wrapper .sections-holder .sec7 .headingbox h1 {
+    font-size: 20vmax;
+  }
+  .wrapper .sections-holder .sec7 .cbholder .cardbox {
+    height: 50vh;
+  }
+  .wrapper .sections-holder .sec7 .cbholder .cardbox:nth-child(1), .wrapper .sections-holder .sec7 .cbholder .cardbox:nth-child(3) {
+    padding-left: 9.7vmax;
+  }
+}
+@media (max-width: 15cm) {
+  .wrapper .sections-holder .sec7 .headingbox h1 {
+    font-size: 14vmax;
+  }
+  .wrapper .sections-holder .sec7 .cbholder .cardbox {
+    height: 60vh;
+  }
+  .wrapper .sections-holder .sec7 .cbholder .cardbox:nth-child(1), .wrapper .sections-holder .sec7 .cbholder .cardbox:nth-child(3) {
+    justify-content: center;
+    padding-left: 0;
+  }
+  .wrapper .sections-holder .sec7 .cbholder .cardbox .card {
+    width: 30vmax;
+    height: 50vmax;
+  }
+  .wrapper .sections-holder .sec7 .cbholder .cardbox .card .top {
+    height: 85%;
+  }
+  .wrapper .sections-holder .sec7 .cbholder .cardbox .card .bottom {
+    height: 15%;
+  }
+  .wrapper .sections-holder .sec7 .cbholder .cardbox .card .bottom h4 {
+    font-size: 3vmax;
+  }
 }/*# sourceMappingURL=style.css.map */
