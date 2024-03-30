@@ -1,40 +1,59 @@
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+ScrollTrigger.normalizeScroll(true);
 
-function locomotiveScroll() {
-  const locoScroll = new LocomotiveScroll({
-    el: document.querySelector(".wrapper"),
-    smooth: true,
-    smartphone: { smooth: true },
-    getDirection: true,
+const scroller = ScrollSmoother.create({
+  wrapper: ".wrapper",
+  content: ".content",
+  smooth: 1.5,
+  effects: true,
+  normalizeScroll: true,
+});
+
+ScrollTrigger.refresh();
+
+function gsapCodeScenarios() {
+  gsap.to(".nav", {
+    scrollTrigger: {
+      trigger: ".sec2",
+      start: "top 70%",
+      end: "top 70%",
+      scrub: 1,
+    },
+    top: "-100%",
+    ease: Expo.easeIn,
   });
 
-  locoScroll.on("scroll", ScrollTrigger.update);
-
-  ScrollTrigger.scrollerProxy(".wrapper", {
-    scrollTop(value) {
-      return arguments.length
-        ? locoScroll.scrollTo(value, 0, 0)
-        : locoScroll.scroll.instance.scroll.y;
+  gsap.to(".row", {
+    scrollTrigger: {
+      trigger: ".sec2",
+      start: "top 70%",
+      end: "top 50%",
+      scrub: 2,
     },
-    getBoundingClientRect() {
-      return {
-        top: 0,
-        left: 0,
-        width: window.innerWidth,
-        height: window.innerHeight,
-      };
-    },
-    pinType: document.querySelector(".wrapper").style.transform
-      ? "transform"
-      : "fixed",
+    opacity: 0,
+    ease: Expo,
   });
 
-  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+  gsap.to(".sec1 p", {
+    scrollTrigger: {
+      trigger: ".sec2",
+      start: "top 70%",
+      end: "top 50%",
+      scrub: 2,
+    },
+    opacity: 0,
+    ease: Expo,
+  });
 
-  ScrollTrigger.refresh();
+  ScrollTrigger.create({
+    trigger: ".sec1",
+    start: "top top",
+    pin: true,
+    pinSpacing: false,
+  });
 }
 
-function slidesHandleKaro() {
+function slideOpenerAnimation() {
   let allSlides = document.querySelectorAll(".sld");
   allSlides = [...allSlides];
 
@@ -77,41 +96,22 @@ function slidesHandleKaro() {
     });
 }
 
-function gsapCodeScenarios() {
-  gsap.to(".nav", {
-    scrollTrigger: {
-      scroller: ".wrapper",
-      trigger: ".sec2",
-      start: "top 70%",
-      end: "top 70%",
-      scrub: 1,
-    },
-    top: "-100%",
-    ease: Expo.easeIn,
+function workAnimationCode() {
+  ScrollTrigger.create({
+    trigger: ".sec7",
+    start: "top top",
+    pin: true,
+    pinSpacing: false,
   });
 
-  gsap.to(".row", {
+  gsap.to(".cbholder", {
     scrollTrigger: {
-      scroller: ".wrapper",
-      trigger: ".sec2",
-      start: "top 70%",
-      end: "top 50%",
+      trigger: ".sec7",
+      start: "top top",
+      pin: true,
       scrub: 2,
     },
-    opacity: 0,
-    ease: Expo,
-  });
-
-  gsap.to(".sec1 p", {
-    scrollTrigger: {
-      scroller: ".wrapper",
-      trigger: ".sec2",
-      start: "top 70%",
-      end: "top 50%",
-      scrub: 2,
-    },
-    opacity: 0,
-    ease: Expo,
+    top: "-250%",
   });
 }
 
@@ -134,7 +134,6 @@ function textAnimationCode() {
   document.querySelectorAll(".rowtexts").forEach(function (elem) {
     gsap.from(elem, {
       scrollTrigger: {
-        scroller: ".wrapper",
         trigger: elem,
         start: "top 60%",
       },
@@ -150,7 +149,7 @@ function textAnimationCode() {
   });
 }
 
-locomotiveScroll();
 gsapCodeScenarios();
+slideOpenerAnimation();
+workAnimationCode();
 // textAnimationCode();
-slidesHandleKaro();

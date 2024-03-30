@@ -480,6 +480,10 @@ body {
             margin-left: 0.5vmax;
           }
         }
+
+        &:nth-child(3) {
+          margin-bottom: 6vmax;
+        }
       }
     }
 
@@ -774,13 +778,10 @@ body {
       }
 
       .cbholder {
+        position: absolute;
+        top: 100%;
         height: fit-content;
         width: 100%;
-
-        .randombox {
-          height: 100vh;
-          width: 100%;
-        }
 
         .cardbox {
           height: fit-content;
@@ -941,7 +942,6 @@ body {
           border-radius: 100px;
           border: 1px solid #fff;
           margin-top: 2vmax;
-          margin-left: 2vmax;
 
           span {
             position: relative;
@@ -1026,6 +1026,67 @@ body {
             border-radius: 50%;
             cursor: pointer;
           }
+        }
+      }
+    }
+
+    @media (max-width: 30cm) {
+      .footer {
+        height: fit-content;
+        flex-direction: column;
+
+        .fleft {
+          height: 70vh;
+          width: 100%;
+          padding: 0 10vmax;
+
+          h3 {
+            font-size: 5vmax;
+            line-height: 5vmax;
+          }
+
+          p {
+            margin-top: 1vmax;
+            letter-spacing: 0.05vmax;
+          }
+
+          .button {
+            padding: 0.8vmax 1.5vmax;
+            margin-top: 4vmax;
+          }
+        }
+
+        .fright {
+          width: 100%;
+
+          a {
+            padding: 2.8vmax 2.5vmax;
+
+            span {
+              font-size: 3.3vmax;
+            }
+          }
+
+          .linkbox {
+            gap: 2.5vmax;
+            padding: 2.8vmax 2.5vmax;
+
+            i {
+              font-size: 3vmax;
+              padding: 1.4vmax;
+              border: 1px solid #888;
+              border-radius: 50%;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 15cm) {
+      .footer {
+        .fleft {
+          padding: 0 2.5vmax;
         }
       }
     }
