@@ -115,41 +115,6 @@ function workAnimationCode() {
   });
 }
 
-function textAnimationCode() {
-  document.querySelectorAll(".rowtexts").forEach(function (row) {
-    row.innerHTML = `<div class="textwrapper">${row.innerHTML}</div>`;
-  });
-
-  document.querySelectorAll(".textwrapper").forEach((txt) => {
-    let clutter = "";
-    txt.textContent.split(" ").forEach((wrd) => {
-      clutter += `<span>${wrd}</span>`;
-    });
-
-    txt.innerHTML = clutter;
-  });
-
-  gsap.set(".rowtexts span", { y: "200%" });
-
-  document.querySelectorAll(".rowtexts").forEach(function (elem) {
-    gsap.from(elem, {
-      scrollTrigger: {
-        trigger: elem,
-        start: "top 60%",
-      },
-      onStart: function () {
-        gsap.to(elem.children[0].children, {
-          y: 0,
-          ease: Power4,
-          duration: 0.3,
-          stagger: 0.2,
-        });
-      },
-    });
-  });
-}
-
 gsapCodeScenarios();
 slideOpenerAnimation();
 workAnimationCode();
-// textAnimationCode();

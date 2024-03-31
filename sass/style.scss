@@ -1,79 +1,4 @@
-@font-face {
-  font-family: aeonikLight;
-  src: url(../fonts/Aeonik-Light.otf);
-}
-
-@font-face {
-  font-family: aeonikRegular;
-  src: url(../fonts/Aeonik-Regular.otf);
-}
-
-@font-face {
-  font-family: aeonikMedium;
-  src: url(../fonts/Aeonik-Medium.otf);
-}
-
-@font-face {
-  font-family: aeonikBold;
-  src: url(../fonts/Aeonik-Bold.otf);
-}
-
-.fs1 {
-  font-size: 22vmax;
-  font-family: aeonikRegular;
-}
-
-.fs2 {
-  font-size: 6vmax;
-  font-weight: 500;
-  font-family: aeonikRegular;
-}
-
-.fs3 {
-  font-size: 3vmax;
-  font-weight: 500;
-  font-family: aeonikRegular;
-}
-
-.fs4 {
-  font-size: 1.5vmax;
-  font-weight: 500;
-  font-family: aeonikRegular;
-}
-
-.fs5 {
-  font-size: 1vmax;
-  font-weight: 500;
-  font-family: aeonikRegular;
-}
-
-.fs6 {
-  font-size: 0.8vmax;
-  font-weight: 500;
-  font-family: aeonikRegular;
-}
-
-@media (max-width: 30cm) {
-  .fs1 {
-    font-size: 10.5vmax;
-  }
-
-  .fs2 {
-    font-size: 5vmax;
-  }
-
-  .fs4 {
-    font-size: 2vmax;
-  }
-
-  .fs5 {
-    font-size: 1.5vmax;
-  }
-
-  .fs6 {
-    font-size: 1.2vmax;
-  }
-}
+@import "font.css";
 
 * {
   margin: 0;
@@ -125,7 +50,7 @@ body {
         z-index: 999;
       }
 
-      .opening {
+      .opener {
         position: absolute;
         z-index: 99;
         top: 50%;
@@ -143,7 +68,7 @@ body {
         border: 1px solid #fff;
       }
 
-      &:hover .opening {
+      &:hover .opener {
         height: 100%;
         transition: 0.25s linear;
       }
@@ -421,7 +346,7 @@ body {
             z-index: 999;
           }
 
-          .opening {
+          .opener {
             position: absolute;
             z-index: 99;
             top: 50%;
@@ -438,7 +363,7 @@ body {
             cursor: pointer;
           }
 
-          &:hover .opening {
+          &:hover .opener {
             height: 100%;
             transition: 0.25s linear;
           }
@@ -505,7 +430,7 @@ body {
         background-color: black;
         border-right: 1px solid #444;
 
-        .opening {
+        .opener {
           transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
           width: 0%;
           height: 100%;
@@ -581,7 +506,7 @@ body {
           left: 50%;
         }
 
-        &:hover .opening {
+        &:hover .opener {
           width: 100%;
         }
 
@@ -948,7 +873,7 @@ body {
             z-index: 999;
           }
 
-          .opening {
+          .opener {
             position: absolute;
             z-index: 99;
             top: 50%;
@@ -965,7 +890,7 @@ body {
             cursor: pointer;
           }
 
-          &:hover .opening {
+          &:hover .opener {
             height: 100%;
             transition: 0.25s linear;
           }
@@ -993,7 +918,7 @@ body {
             font-weight: 400;
           }
 
-          .opening {
+          .opener {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -1004,7 +929,7 @@ body {
             transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
           }
 
-          &:hover .opening {
+          &:hover .opener {
             transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
             height: 100%;
           }

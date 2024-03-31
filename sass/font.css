@@ -1,0 +1,76 @@
+@font-face {
+  font-family: aeonikLight;
+  src: url(../fonts/Aeonik-Light.otf);
+}
+
+@font-face {
+  font-family: aeonikRegular;
+  src: url(../fonts/Aeonik-Regular.otf);
+}
+
+@font-face {
+  font-family: aeonikMedium;
+  src: url(../fonts/Aeonik-Medium.otf);
+}
+
+@font-face {
+  font-family: aeonikBold;
+  src: url(../fonts/Aeonik-Bold.otf);
+}
+
+.fs1 {
+  font-size: 22vmax;
+  font-family: aeonikRegular;
+}
+
+.fs2 {
+  font-size: 6vmax;
+  font-weight: 500;
+  font-family: aeonikRegular;
+}
+
+.fs3 {
+  font-size: 3vmax;
+  font-weight: 500;
+  font-family: aeonikRegular;
+}
+
+.fs4 {
+  font-size: 1.5vmax;
+  font-weight: 500;
+  font-family: aeonikRegular;
+}
+
+.fs5 {
+  font-size: 1vmax;
+  font-weight: 500;
+  font-family: aeonikRegular;
+}
+
+.fs6 {
+  font-size: 0.8vmax;
+  font-weight: 500;
+  font-family: aeonikRegular;
+}
+
+@media (max-width: 30cm) {
+  .fs1 {
+    font-size: 10.5vmax;
+  }
+
+  .fs2 {
+    font-size: 5vmax;
+  }
+
+  .fs4 {
+    font-size: 2vmax;
+  }
+
+  .fs5 {
+    font-size: 1.5vmax;
+  }
+
+  .fs6 {
+    font-size: 1.2vmax;
+  }
+}
