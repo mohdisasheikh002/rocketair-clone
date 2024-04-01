@@ -1,71 +1,4 @@
-@font-face {
-  font-family: aeonikLight;
-  src: url(../fonts/Aeonik-Light.otf);
-}
-@font-face {
-  font-family: aeonikRegular;
-  src: url(../fonts/Aeonik-Regular.otf);
-}
-@font-face {
-  font-family: aeonikMedium;
-  src: url(../fonts/Aeonik-Medium.otf);
-}
-@font-face {
-  font-family: aeonikBold;
-  src: url(../fonts/Aeonik-Bold.otf);
-}
-.fs1 {
-  font-size: 22vmax;
-  font-family: aeonikRegular;
-}
-
-.fs2 {
-  font-size: 6vmax;
-  font-weight: 500;
-  font-family: aeonikRegular;
-}
-
-.fs3 {
-  font-size: 3vmax;
-  font-weight: 500;
-  font-family: aeonikRegular;
-}
-
-.fs4 {
-  font-size: 1.5vmax;
-  font-weight: 500;
-  font-family: aeonikRegular;
-}
-
-.fs5 {
-  font-size: 1vmax;
-  font-weight: 500;
-  font-family: aeonikRegular;
-}
-
-.fs6 {
-  font-size: 0.8vmax;
-  font-weight: 500;
-  font-family: aeonikRegular;
-}
-
-@media (max-width: 30cm) {
-  .fs1 {
-    font-size: 10.5vmax;
-  }
-  .fs2 {
-    font-size: 5vmax;
-  }
-  .fs4 {
-    font-size: 2vmax;
-  }
-  .fs5 {
-    font-size: 1.5vmax;
-  }
-  .fs6 {
-    font-size: 1.2vmax;
-  }
-}
+@import "font.css";
 * {
   margin: 0;
   padding: 0;
@@ -114,7 +47,7 @@ body {
   position: relative;
   z-index: 999;
 }
-.nav .linkbox .button .opening {
+.nav .linkbox .button .opener {
   position: absolute;
   z-index: 99;
   top: 50%;
@@ -130,7 +63,7 @@ body {
   cursor: pointer;
   border: 1px solid #fff;
 }
-.nav .linkbox .button:hover .opening {
+.nav .linkbox .button:hover .opener {
   height: 100%;
   transition: 0.25s linear;
 }
@@ -367,7 +300,7 @@ body {
   position: relative;
   z-index: 999;
 }
-.wrapper .sections-holder .sec4 .rowtext .button .opening {
+.wrapper .sections-holder .sec4 .rowtext .button .opener {
   position: absolute;
   z-index: 99;
   top: 50%;
@@ -382,7 +315,7 @@ body {
   color: #000;
   cursor: pointer;
 }
-.wrapper .sections-holder .sec4 .rowtext .button:hover .opening {
+.wrapper .sections-holder .sec4 .rowtext .button:hover .opener {
   height: 100%;
   transition: 0.25s linear;
 }
@@ -436,7 +369,7 @@ body {
   background-color: black;
   border-right: 1px solid #444;
 }
-.wrapper .sections-holder .sec5 .slide .opening {
+.wrapper .sections-holder .sec5 .slide .opener {
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
   width: 0%;
   height: 100%;
@@ -502,7 +435,7 @@ body {
   top: 50%;
   left: 50%;
 }
-.wrapper .sections-holder .sec5 .slide:hover .opening {
+.wrapper .sections-holder .sec5 .slide:hover .opener {
   width: 100%;
 }
 .wrapper .sections-holder .sec5 .slide:hover p {
@@ -807,7 +740,7 @@ body {
   position: relative;
   z-index: 999;
 }
-.wrapper .sections-holder .footer .fleft .button .opening {
+.wrapper .sections-holder .footer .fleft .button .opener {
   position: absolute;
   z-index: 99;
   top: 50%;
@@ -822,7 +755,7 @@ body {
   color: #000;
   cursor: pointer;
 }
-.wrapper .sections-holder .footer .fleft .button:hover .opening {
+.wrapper .sections-holder .footer .fleft .button:hover .opener {
   height: 100%;
   transition: 0.25s linear;
 }
@@ -846,7 +779,7 @@ body {
   font-size: 2.3vmax;
   font-weight: 400;
 }
-.wrapper .sections-holder .footer .fright a .opening {
+.wrapper .sections-holder .footer .fright a .opener {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -856,7 +789,7 @@ body {
   background-color: #fff;
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
 }
-.wrapper .sections-holder .footer .fright a:hover .opening {
+.wrapper .sections-holder .footer .fright a:hover .opener {
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
   height: 100%;
 }

@@ -52,6 +52,7 @@ function gsapCodeScenarios() {
     pinSpacing: false,
   });
 }
+gsapCodeScenarios();
 
 function slideOpenerAnimation() {
   let allSlides = document.querySelectorAll(".sld");
@@ -95,6 +96,7 @@ function slideOpenerAnimation() {
       document.querySelector(".minicircle").style.boxShadow = "none";
     });
 }
+slideOpenerAnimation();
 
 function workAnimationCode() {
   ScrollTrigger.create({
@@ -114,7 +116,4 @@ function workAnimationCode() {
     top: "-250%",
   });
 }
-
-gsapCodeScenarios();
-slideOpenerAnimation();
 workAnimationCode();
