@@ -713,6 +713,9 @@ body {
   text-transform: capitalize;
   margin-bottom: 1vmax;
 }
+.wrapper .sections-holder .footer .fleft p {
+  letter-spacing: 0.02vmax;
+}
 .wrapper .sections-holder .footer .fleft img {
   margin: 3vmax 0;
   width: 60%;
@@ -720,10 +723,10 @@ body {
 .wrapper .sections-holder .footer .fleft input {
   width: 100%;
   background-color: transparent;
-  color: rgba(68, 68, 68, 0.2666666667);
+  color: #fff;
   border: none;
-  font-weight: 600;
-  padding-bottom: 1vmax;
+  font-weight: 500;
+  padding: 0.8vmax;
   border-bottom: 1px solid #333;
 }
 .wrapper .sections-holder .footer .fleft .button {
@@ -801,12 +804,38 @@ body {
   gap: 2vmax;
   padding: 1.4vmax 3vmax;
 }
-.wrapper .sections-holder .footer .fright .linkbox i {
+.wrapper .sections-holder .footer .fright .linkbox span {
+  position: relative;
+  background-color: #000;
+  padding: 0.7vmax 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.wrapper .sections-holder .footer .fright .linkbox span i {
+  position: relative;
+  z-index: 999;
   font-size: 1.5vmax;
   padding: 0.7vmax;
   border: 1px solid #888;
   border-radius: 50%;
   cursor: pointer;
+}
+.wrapper .sections-holder .footer .fright .linkbox span .opener {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 0px;
+  background-color: #fff;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+.wrapper .sections-holder .footer .fright .linkbox span:hover .opener {
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+  height: 100%;
+}
+.wrapper .sections-holder .footer .fright .linkbox span:hover {
+  color: #000;
 }
 @media (max-width: 30cm) {
   .wrapper .sections-holder .footer {
@@ -844,8 +873,11 @@ body {
     gap: 2.5vmax;
     padding: 2.8vmax 2.5vmax;
   }
-  .wrapper .sections-holder .footer .fright .linkbox i {
-    font-size: 3vmax;
+  .wrapper .sections-holder .footer .fright .linkbox span {
+    padding: 1.4vmax 0;
+  }
+  .wrapper .sections-holder .footer .fright .linkbox span i {
+    font-size: 2.5vmax;
     padding: 1.4vmax;
     border: 1px solid #888;
     border-radius: 50%;
